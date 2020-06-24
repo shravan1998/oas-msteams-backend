@@ -97,19 +97,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .authorizeRequests()
 //                .requestMatchers(PathRequest.toStaticResources().atCommonLocations()).permitAll()
-                .antMatchers("/**/assets/images/**").permitAll()
-                .antMatchers("/**/assets/**/**/**/").permitAll()
-                .antMatchers("/**/assets/images/**").permitAll()
-                .antMatchers("/**/app/logout").permitAll()
-                .antMatchers("/**/web/logout").permitAll()
-                .antMatchers("/**/web/images/**").permitAll()
-                .antMatchers("/**/web/documents/**").permitAll()
-                .antMatchers("/**/app/images/**").permitAll()
-                .antMatchers("/**/app/documents/**").permitAll()
-                .antMatchers("/web/generate-otp").permitAll()
-                .antMatchers("/web/update-password").permitAll()
-           .antMatchers("/web/save-employee").permitAll()
-             .antMatchers("/web/save-employee/*").permitAll()
+
+                .antMatchers("/logout").permitAll()
+
+                .antMatchers("/login").permitAll()
 
 
                 .antMatchers("/").permitAll()

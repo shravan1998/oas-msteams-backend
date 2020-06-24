@@ -22,11 +22,23 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 @EnableScheduling
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true)
-public class DemoApplication {
+public class DemoApplication extends SpringBootServletInitializer{
+
+	@Override
+	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+		return application.sources(DemoApplication.class);
+	}
+
+	/**
+	 * To enable jar execution
+	 *
+	 * @param args
+	 */
 
 	public static void main(String[] args) {
-
 		SpringApplication.run(DemoApplication.class, args);
+
+
 	}
 
 }

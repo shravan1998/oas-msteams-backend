@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.util.List;
-@RequestMapping(value = {"/web", "/app"})
+
 @RestController
 @CrossOrigin(maxAge = 3600, allowedHeaders = "*")
 public class LoginController {
